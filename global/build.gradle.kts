@@ -1,1 +1,0 @@
-group = "hu.montlikadani.tablist"
