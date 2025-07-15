@@ -1,7 +1,7 @@
 name: TabList
 main: hu.montlikadani.tablist.TabList
-version: 5.7.7
-author: montlikadani
+version: 5.7.8-SNAPSHOT
+author: global
 description: An alternative tablist plugin to replace vanilla empty tab
 softdepend:
 - Vault
@@ -14,7 +14,7 @@ softdepend:
 - StaffFacilities
 - PlaceholderAPI
 - Multiverse-Core # Load this plugin before tablist to prevent issues
-api-version: 1.13
+api-version: 1.21.7
 folia-supported: true
 # DO NOT EDIT ANYTHING ABOVE THIS LINE!
 
