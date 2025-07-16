@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import hu.montlikadani.tablist.Global;
 import org.bukkit.configuration.file.FileConfiguration;
 
 import hu.montlikadani.tablist.utils.Util;
