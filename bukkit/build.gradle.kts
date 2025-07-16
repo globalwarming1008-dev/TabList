@@ -14,23 +14,24 @@ repositories {
     maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
 
     maven {
-		url = uri("https://jitpack.io")
-		content {
-			includeGroup("com.github.johnrengelman")
-			includeGroup("com.github.xtomyserrax")
-			includeGroup("com.github.MilkBowl")
-			includeGroup("com.github.LeonMangler")
-		}
-	}
+        url = uri("https://jitpack.io")
+        content {
+            includeGroup("com.github.johnrengelman")
+            includeGroup("com.github.xtomyserrax")
+            includeGroup("com.github.MilkBowl")
+            includeGroup("com.github.LeonMangler")
+        }
+    }
 
     maven("https://oss.sonatype.org/content/groups/public/") // Netty
 }
 
-val nmsProjects = setOf("1_8_8", "1_17_1", "1_18_2", "1_19_1", "1_19_2", "1_19_3", "1_19_4", "1_20_1", "1_20_2",
-    "1_20_4", "1_20_6", "1_21")
+val nmsProjects = setOf(
+    "1_8_8", "1_17_1", "1_18_2", "1_19_1", "1_19_2",
+    "1_19_3", "1_19_4", "1_20_1", "1_20_2", "1_20_4", "1_20_6", "1_21"
+)
 
 dependencies {
-    implementation(project(":global"))
     api(project(":api"))
     api(project(":folia"))
 
@@ -91,7 +92,7 @@ tasks {
             }
 
             include(project(":api"))
-            include(project(":global"))
+            // Removed include(project(":global"))
             include(dependency("org.bstats::"))
         }
 
