@@ -2,28 +2,26 @@ name: Build TabList
 
 on:
   push:
-    branches:
-    - master
+    branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-22.04
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK
-      uses: actions/setup-java@v4
-      with:
-        java-version: 21
-        distribution: 'temurin'
+      - uses: actions/checkout@v4
 
-    - name: Build all
-      run: ./gradlew clean build
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 21
+          distribution: temurin
 
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: tablist-dev
-        path: |
-          ${{ github.workspace }}/bukkit/build/libs/TabList-bukkit*.jar
-          ${{ github.workspace }}/bungee/build/libs/TabList-bungee*.jar
+      - name: Build Bukkit module
+        run: ./gradlew :bukkit:clean :bukkit:build
+
+      - name: Upload Bukkit jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: TabList-5.7.8-SNAPSHOT.jar
+          path: bukkit/build/libs/TabList-bukkit*.jar
