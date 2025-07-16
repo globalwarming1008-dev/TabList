@@ -17,13 +17,8 @@ jobs:
           java-version: 21
           distribution: temurin
 
-      - name: Build (skip Bungee)
-        run: |
-          ./gradlew clean build \
-            -x :bungee:compileJava \
-            -x :bungee:processResources \
-            -x :bungee:jar \
-            -x :bungee:build
+   - name: Build Bukkit module
+        run: ./gradlew :bukkit:clean :bukkit:build
 
       - name: Upload Bukkit jar
         uses: actions/upload-artifact@v4
