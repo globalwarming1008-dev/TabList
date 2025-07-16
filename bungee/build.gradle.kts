@@ -17,19 +17,14 @@ repositories {
 }
 
 dependencies {
-	implementation(project(":global"))
+    implementation("net.md-5:bungeecord-api:1.20.2") {
+        // brigadier is shaded into Bukkit at runtime; keep it off the compile‑path
+        exclude(group = "com.mojang", module = "brigadier")
+    }
 
-	implementation "net.md-5:bungeecord-api:1.20.2") {
-		exclude("com.mojang", "brigadier")
-	}
-
-	implementation "net.md-5:bungeecord-chat:1.20.2") {
-		exclude("com.mojang", "brigadier")
-	}
-
-	compileOnly("com.github.LeonMangler:PremiumVanishAPI:2.9.0-4") {
-		isTransitive = true
-	}
+    implementation("net.md-5:bungeecord-chat:1.20.2") {
+        exclude(group = "com.mojang", module = "brigadier")
+    }
 }
 
 version = "2.3.5"
