@@ -10,9 +10,7 @@ import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Player;
 
 import hu.montlikadani.tablist.config.constantsLoader.ConfigValues;
-import hu.montlikadani.tablist.logicalOperators.LogicalNode;
 import hu.montlikadani.tablist.user.TabListUser;
-import hu.montlikadani.tablist.Global;
 import hu.montlikadani.tablist.TabList;
 import hu.montlikadani.tablist.api.TabListAPI;
 import hu.montlikadani.tablist.utils.PluginUtils;
