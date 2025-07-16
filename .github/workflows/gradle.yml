@@ -17,7 +17,7 @@ jobs:
           java-version: 21
           distribution: temurin
 
-   - name: Build Bukkit module
+      - name: Build Bukkit module
         run: ./gradlew :bukkit:clean :bukkit:build
 
       - name: Upload Bukkit jar
