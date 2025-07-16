@@ -8,7 +8,6 @@ import hu.montlikadani.tablist.utils.ServerVersion;
 import hu.montlikadani.tablist.utils.reflection.ComponentParser;
 import org.bukkit.configuration.ConfigurationSection;
 
-import hu.montlikadani.tablist.Global;
 import hu.montlikadani.tablist.Objects;
 import hu.montlikadani.tablist.config.CommentedConfig;
 
