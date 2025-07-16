@@ -8,7 +8,6 @@ import org.bukkit.NamespacedKey;
 
 import com.google.gson.JsonObject;
 
-import hu.montlikadani.tablist.Global;
 import hu.montlikadani.tablist.packets.PacketNM;
 import hu.montlikadani.tablist.tablist.TabText;
 
